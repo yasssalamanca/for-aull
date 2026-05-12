@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu ❤️</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-bg': '#fffafb',
+                        'soft-pink': '#ffb6c1',
+                        'rose-pink': '#fb7185',
+                        'dark-text': '#475569',
+                    },
+                    fontFamily: {
+                        heading: ['Quicksand', 'sans-serif'],
+                        body: ['Nunito', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'pink-glow': '0 4px 14px 0 rgba(251, 113, 133, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS for Floating Animation -->
+    <style>
+        body {
+            background-color: #fffafb;
+            color: #475569;
+            font-family: 'Nunito', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .floating-heart {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        .typing-text::after {
+            content: '|';
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="relative min-h-screen pb-20">
+
+    <!-- Floating Background Elements -->
+    <div class="floating-heart text-rose-pink text-2xl top-10 left-10" style="animation-delay: 0s;">🌸</div>
+    <div class="floating-heart text-rose-pink text-3xl top-40 right-10" style="animation-delay: 1s;">❤️</div>
+    <div class="floating-heart text-rose-pink text-xl top-1/2 left-5" style="animation-delay: 2s;">✨</div>
+    <div class="floating-heart text-rose-pink text-2xl bottom-20 right-20" style="animation-delay: 3s;">🌸</div>
+
+    <!-- Extra Lightweight Decorations -->
+    <div class="absolute top-24 right-8 opacity-50 animate-pulse text-yellow-400 text-xl z-[-1]">✨</div>
+    <div class="absolute top-72 left-8 opacity-40 animate-bounce text-yellow-400 text-2xl z-[-1]"
+        style="animation-duration: 3s;">⭐</div>
+    <div class="absolute top-1/3 right-12 opacity-60 animate-pulse text-rose-pink text-lg z-[-1]">🎀</div>
+    <div class="absolute bottom-32 left-12 opacity-50 animate-bounce text-soft-pink text-xl z-[-1]"
+        style="animation-duration: 4s;">💖</div>
+
+    <main class="max-w-md mx-auto px-6 pt-12 flex flex-col gap-12">
+
+        <!-- Hero Section -->
+        <section class="text-center flex flex-col items-center gap-4" data-aos="fade-down" data-aos-duration="1000">
+            <!-- GANTI FOTO DI SINI -->
+            <img src="pp.jpg" alt="Avatar"
+                class="w-32 h-32 rounded-full shadow-pink-glow border-4 border-white object-cover">
+
+            <h1 class="text-3xl font-bold text-rose-pink mt-4">haiii, aull-!!</h1>
+            <p id="hero-text" class="text-lg text-dark-text min-h-[60px]"></p>
+        </section>
+
+        <!-- Audio Player Section (Spotify Style) -->
+        <section class="w-full flex flex-col items-center mt-2 mb-4" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-delay="400">
+            <p class="text-sm text-rose-pink font-semibold mb-3 italic animate-pulse">putar lagunyaaa 🎵</p>
+            <div class="bg-white rounded-3xl w-full max-w-[320px] p-5 shadow-pink-glow flex flex-col gap-5">
+
+                <!-- Cover Image -->
+                <div
+                    class="w-full aspect-square bg-soft-pink rounded-2xl overflow-hidden shadow-inner flex items-center justify-center">
+                    <!-- GANTI COVER LAGU DI SINI -->
+                    <img src="music_cover.jpg" alt="Album Cover" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Title & Artist -->
+                <div class="flex justify-between items-center">
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold text-rose-pink leading-tight">Glue Song (feat. Clairo)</h3>
+                        <p class="text-sm text-dark-text opacity-80 mt-1">beabadoobee, Clairo</p>
+                    </div>
+                    <!-- Heart Icon -->
+                    <button class="text-rose-pink hover:scale-110 active:scale-95 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-7 h-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Audio Element -->
+                <!-- GANTI AUDIO DI SINI -->
+                <audio id="vn-audio" src="beabadoobee.mp3"></audio>
+
+                <!-- Progress Bar & Timer -->
+                <div class="flex flex-col gap-1.5 mt-2">
+                    <input type="range" id="vn-progress"
+                        class="w-full h-1.5 bg-soft-pink rounded-lg appearance-none cursor-pointer"
+                        style="accent-color: #fb7185;" value="0" min="0" max="100">
+                    <div class="flex justify-between text-[11px] text-dark-text font-bold opacity-80">
+                        <span id="vn-current-time">0:00</span>
+                        <span id="vn-duration">0:00</span>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="flex justify-between items-center px-1">
+                    <!-- Shuffle -->
+                    <button class="text-dark-text opacity-50 hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+                        </svg>
+                    </button>
+                    <!-- Prev -->
+                    <button class="text-rose-pink hover:scale-110 active:scale-95 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-7 h-7">
+                            <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+                        </svg>
+                    </button>
+                    <!-- Play/Pause -->
+                    <button id="vn-play-btn"
+                        class="bg-rose-pink text-white rounded-full p-3.5 hover:scale-110 active:scale-95 transition-transform shadow-pink-glow">
+                        <svg id="vn-play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor" class="w-8 h-8 ml-1">
+                            <path fill-rule="evenodd"
+                                d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <svg id="vn-pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor" class="w-8 h-8 hidden">
+                            <path fill-rule="evenodd"
+                                d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zm7.5 0A.75.75 0 0115 4.5h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H15a.75.75 0 01-.75-.75V5.25z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <!-- Next -->
+                    <button class="text-rose-pink hover:scale-110 active:scale-95 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-7 h-7">
+                            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                        </svg>
+                    </button>
+                    <!-- Repeat -->
+                    <button class="text-dark-text opacity-50 hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Message Cards Section -->
+        <section class="flex flex-col gap-6 w-full">
+
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-2xl shadow-pink-glow flex flex-col items-center gap-4 text-center transform transition-all duration-300 hover:-translate-y-1"
+                data-aos="fade-up" data-aos-duration="800">
+                <!-- GANTI GIF DI SINI -->
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWNiODZpaGM4Y3kyMDR3OHR6ajJiNTQyNGM0ajNhendudDB2bWhjcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KztT2c4u8mYYUiMKdJ/giphy.gif"
+                    alt="Cute Cat" class="rounded-xl w-full max-h-48 object-cover">
+                <h2 class="text-xl font-bold text-rose-pink">hmmm, ada yg mauu ujikom niih:></h2>
+                <p class="text-dark-text">dengan smuaa prepare di jauhh jauh harii... yap, akuu percayaa kamu bisaa! do
+                    the best yaa!!</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-2xl shadow-pink-glow flex flex-col items-center gap-4 text-center transform transition-all duration-300 hover:-translate-y-1"
+                data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <!-- GANTI GIF DI SINI -->
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnQzeHFwdWJkZjYyN2Q3OHMzcml1YnF0YWJxaGZ1ZnRvYmYxN2k2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7bufrhglm1BTsfra/giphy.gif"
+                    alt="Hug" class="rounded-xl w-full max-h-48 object-cover">
+                <h2 class="text-xl font-bold text-rose-pink">pokonyaa pedee yaak!</h2>
+                <p class="text-dark-text">akuu tauu bakal susaah, but i know that u can do it! i know u cann!!
+                    taklukanlah ujikom yg menyebalkan itu yaaa?~</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-2xl shadow-pink-glow flex flex-col items-center gap-4 text-center transform transition-all duration-300 hover:-translate-y-1"
+                data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <!-- GANTI GIF DI SINI -->
+                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDE2bm5ya3VrOXM3ODN5ejdlN25nYWhndGczYzY0bnRwYWdwa25hZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KyEtlYiutRHVC68Ess/giphy.gif"
+                    alt="Smile" class="rounded-xl w-full max-h-48 object-cover">
+                <h2 class="text-xl font-bold text-rose-pink">rayakann dengan akuu nantii yaaa!</h2>
+                <p class="text-dark-text">pokonyaa ak senengg bgt buatt km, ntar kitaa rayakan yaaw~</p>
+            </div>
+
+        </section>
+
+        <!-- Interactive Section -->
+        <section class="flex flex-col items-center gap-6 mt-6 text-center" data-aos="zoom-in" data-aos-duration="1000">
+            <h2 class="text-xl font-bold text-dark-text">adaaa sesuatu buat km</h2>
+
+            <button id="surprise-btn"
+                class="bg-rose-pink hover:bg-pink-500 text-white font-bold py-4 px-8 rounded-full shadow-pink-glow transform transition-all duration-300 hover:scale-105 active:scale-95 text-lg">
+                pencet ak donggg~
+            </button>
+
+            <div id="secret-message"
+                class="hidden mt-6 p-6 bg-rose-pink text-white rounded-2xl shadow-pink-glow transform transition-all duration-500 opacity-0 scale-95">
+                <h3 class="text-2xl font-bold mb-2">semangat yaaa<3 </h3>
+                        <p>semangatt buat hadapinn apapun yg adaa di depan kamuu yaa, you can beat this world! love u
+                        </p>
+                        </br>
+                        <p>yass, 2026</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: false,
+            mirror: true,
+        });
+
+        // Typing Effect
+        const heroText = document.getElementById('hero-text');
+        const textToType = "hi theree pretty girl! inii akuu ada sesuatuu buat km yang.. ku harapp km suka yaa, meskii simpel jg gapapa kan?:>";
+        let index = 0;
+
+        function typeWriter() {
+            if (index < textToType.length) {
+                heroText.innerHTML += textToType.charAt(index);
+                index++;
+                setTimeout(typeWriter, 50);
+            } else {
+                heroText.classList.add('typing-text');
+            }
+        }
+
+        // Start typing after a short delay
+        setTimeout(typeWriter, 1000);
+
+        // Voice Note Player Logic
+        const vnAudio = document.getElementById('vn-audio');
+        const vnPlayBtn = document.getElementById('vn-play-btn');
+        const vnPlayIcon = document.getElementById('vn-play-icon');
+        const vnPauseIcon = document.getElementById('vn-pause-icon');
+        const vnProgress = document.getElementById('vn-progress');
+        const vnCurrentTime = document.getElementById('vn-current-time');
+        const vnDuration = document.getElementById('vn-duration');
+
+        let isPlaying = false;
+
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return "0:00";
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return `${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        vnAudio.addEventListener('loadedmetadata', () => {
+            vnDuration.textContent = formatTime(vnAudio.duration);
+            vnProgress.max = Math.floor(vnAudio.duration);
+        });
+
+        vnPlayBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                vnAudio.pause();
+                vnPlayIcon.classList.remove('hidden');
+                vnPauseIcon.classList.add('hidden');
+            } else {
+                vnAudio.play();
+                vnPlayIcon.classList.add('hidden');
+                vnPauseIcon.classList.remove('hidden');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        vnAudio.addEventListener('timeupdate', () => {
+            vnProgress.value = Math.floor(vnAudio.currentTime);
+            vnCurrentTime.textContent = formatTime(vnAudio.currentTime);
+        });
+
+        vnProgress.addEventListener('input', () => {
+            vnAudio.currentTime = vnProgress.value;
+        });
+
+        vnAudio.addEventListener('ended', () => {
+            isPlaying = false;
+            vnPlayIcon.classList.remove('hidden');
+            vnPauseIcon.classList.add('hidden');
+            vnProgress.value = 0;
+            vnCurrentTime.textContent = "0:00";
+        });
+
+        // Surprise Button Logic
+        const btn = document.getElementById('surprise-btn');
+        const secretMsg = document.getElementById('secret-message');
+        let clicked = false;
+
+        btn.addEventListener('click', () => {
+            // Trigger Confetti
+            var duration = 3 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#ffb6c1', '#fb7185', '#ffffff']
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#ffb6c1', '#fb7185', '#ffffff']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+
+            // Show Secret Message
+            if (!clicked) {
+                secretMsg.classList.remove('hidden');
+                // Small delay to allow display block to apply before opacity transition
+                setTimeout(() => {
+                    secretMsg.classList.remove('opacity-0', 'scale-95');
+                    secretMsg.classList.add('opacity-100', 'scale-100');
+                }, 50);
+
+                btn.innerHTML = "Dipencet Lagi Boleh Kok 🌸";
+                clicked = true;
+            } else {
+                // Just extra confetti and bounce effect if clicked again
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ['#ffb6c1', '#fb7185', '#ffffff']
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
